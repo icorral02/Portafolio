@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Issac Emilio Corral Harper · Desarrollador Web Frontend</title>
+    <meta name="description"
+        content="Portafolio de Issac Emilio Corral Harper. Estudiante de Ingeniería en Sistemas Computacionales y desarrollador web frontend en la Universidad de Montemorelos.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Tres <link> separados a propósito: si una familia fallara, las otras dos siguen cargando.
+     Un solo request combinado devuelve 400 y se cae la tipografía completa. -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Sharp:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ===== FONDO FIJO: patrón SVG vía CSS (background-image en .circuit) ===== -->
+    <div class="circuit" aria-hidden="true"></div>
+    <div class="veil" aria-hidden="true"></div>
+
+    <!-- ===== NAV ===== -->
+    <header class="nav-bar">
+        <nav class="navbar navbar-expand-lg wrap px-0" aria-label="Navegación principal">
+            <div class="container-fluid px-0" style="padding-inline:var(--rail)">
+                <a class="mark" href="#inicio">
+                    <svg viewBox="0 0 48 48" role="img" aria-label="Logotipo IECH">
+                        <path d="M15 9 L6 24 L15 39" fill="none" stroke="#008F8F" stroke-width="2.4"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M33 9 L42 24 L33 39" fill="none" stroke="#00478F" stroke-width="2.4"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <text x="24" y="29" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="700"
+                            font-size="12.5" fill="#FFFFFF">IECH</text>
+                    </svg>
+                    <span>Issac Corral</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon" style="filter:invert(1) opacity(.7)"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certificaciones">Certificaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#stack">Stack</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="inicio">
+
+        <!-- ===== HERO ===== -->
+        <section class="wrap hero">
+            <p class="role">Desarrollador web frontend en la Universidad de Montemorelos</p>
+            <h1>Issac Emilio<br>Corral Harper</h1>
+            <p class="claim">Cada día construyo un ladrillo más.</p>
+            <p class="lede">
+                Estudio Ingeniería en Sistemas Computacionales y llevo desde julio de 2024
+                construyendo y manteniendo interfaces web que usan estudiantes y visitantes
+                reales. Mi base está en frontend; ahora avanzo hacia backend para trabajar
+                de punta a punta.
+            </p>
+            <div class="btn-row">
+                <a class="btn-solid" href="#proyectos">Ver proyectos</a>
+                <a class="btn-line" href="assets/Issac_Corral_CV.pdf" download>Descargar CV</a>
+            </div>
+        </section>
+
+        <!-- ===== DATOS ===== -->
+        <section class="wrap" aria-label="Datos rápidos">
+            <div class="facts">
+                <div class="fact"><b>2</b><small>sitios institucionales publicados y en línea</small></div>
+                <div class="fact"><b>2024</b><small>trabajando en el Departamento de Comunicación Institucional</small>
+                </div>
+                <div class="fact"><b>3</b><small>certificaciones completadas fuera del plan de estudios</small></div>
+                <div class="fact"><b>3.º</b><small>semestre de Ingeniería en Sistemas Computacionales</small></div>
+            </div>
+        </section>
+
+        <!-- ===== SOBRE MÍ ===== -->
+        <section class="wrap band" id="sobre-mi">
+            <div class="about">
+                <div>
+                    <h2 class="h-sec">Sobre mí</h2>
+                    <dl class="aside">
+                        <dt>Ubicación</dt>
+                        <dd>Montemorelos, Nuevo León, México</dd>
+                        <dt>Formación</dt>
+                        <dd>Universidad de Montemorelos, desde agosto de 2025</dd>
+                        <dt>Objetivo</dt>
+                        <dd>Software Engineer</dd>
+                    </dl>
+                </div>
+                <div>
+                    <p>
+                        Me destaco por aprender de forma proactiva y autodidacta las tecnologías
+                        que el campo laboral está pidiendo. Tengo experiencia sólida en frontend
+                        y disfruto el proceso de aprender backend para llegar a ser fullstack.
+                    </p>
+                    <p>
+                        Lo que hago no se queda en ejercicios de clase: los proyectos que
+                        construyo están publicados, los usa gente que no me conoce, y los
+                        mantengo yo. Esa es la parte que más me ha enseñado — leer documentación
+                        oficial, integrar APIs, optimizar imágenes y sostener un sitio después
+                        de lanzarlo.
+                    </p>
+                    <p>
+                        Trabajo bien en equipo y me muevo cómodo entre entornos distintos. En la
+                        preparatoria fui presidente de la clase de graduandos y en la universidad
+                        participé en el Hackathon FITEC 2025.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="rule">
+
+        <!-- ===== CÓMO TRABAJO ===== -->
+        <section class="wrap band">
+            <h2 class="h-sec">Cómo trabajo</h2>
+            <p class="lede">Cuatro cosas que definen la forma en que entrego.</p>
+            <div class="ways">
+                <article class="way">
+                    <h3>Frontend que llega a producción</h3>
+                    <p>No entrego maquetas: subo, despliego y mantengo. Manejo cPanel, FTP con
+                        FileZilla, Apache y Git en el flujo real de publicación.</p>
+                </article>
+                <article class="way">
+                    <h3>Camino claro hacia fullstack</h3>
+                    <p>Ya trabajo templates en PHP con MySQL como primer acercamiento al
+                        servidor, y estudio Python para consolidar el backend.</p>
+                </article>
+                <article class="way">
+                    <h3>Aprendizaje comprobable</h3>
+                    <p>Cada tecnología que agrego viene con algo que la respalde: un proyecto
+                        publicado o una certificación con folio verificable.</p>
+                </article>
+                <article class="way">
+                    <h3>Documentación antes que atajos</h3>
+                    <p>Mi método por defecto es leer la fuente oficial. Es más lento al
+                        principio y mucho más barato de mantener después.</p>
+                </article>
+            </div>
+        </section>
+
+        <hr class="rule">
+
+        <!-- ===== PROYECTOS ===== -->
+        <section class="wrap band" id="proyectos">
+            <h2 class="h-sec">Proyectos</h2>
+            <p class="lede">Los dos están en línea y los puedes abrir ahora mismo.</p>
+
+            <article class="proj">
+                <div class="proj-top">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="proj-url">um.edu.mx/recorrido-virtual/</span>
+                </div>
+                <div class="proj-body">
+                    <!-- Reemplaza este div por: <img src="assets/recorrido-virtual.png" alt="Captura del recorrido virtual"> -->
+                    <div class="shot">Espacio para la captura del recorrido virtual</div>
+                    <div class="proj-text">
+                        <h3>Recorrido Virtual UM</h3>
+                        <p class="when">Octubre 2024 a abril 2025</p>
+                        <p>
+                            Recorrido 360° del campus para quienes no pueden visitarlo en persona:
+                            aspirantes foráneos, familias y estudiantes internacionales. Es el
+                            proyecto con el que empecé a programar en serio.
+                        </p>
+                        <ul class="chips">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Pannellum.js</li>
+                            <li>jQuery</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                        <a class="btn-line" href="https://www.um.edu.mx/recorrido-virtual/" target="_blank"
+                            rel="noopener">Abrir el recorrido</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="proj">
+                <div class="proj-top">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="proj-url">facsa.um.edu.mx/terapia-fisica/</span>
+                </div>
+                <div class="proj-body">
+                    <!-- Reemplaza este div por: <img src="assets/terapia-fisica.png" alt="Captura del sitio de Terapia Física"> -->
+                    <div class="shot">Espacio para la captura de Terapia Física</div>
+                    <div class="proj-text">
+                        <h3>Terapia Física UM</h3>
+                        <p class="when">Departamento de Comunicación Institucional</p>
+                        <p>
+                            Sitio de la carrera de Terapia Física. Aquí salí del HTML plano y
+                            armé la vista con templates en PHP, que fue mi primer contacto real
+                            con lógica del lado del servidor.
+                        </p>
+                        <ul class="chips">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                        <a class="btn-line" href="https://facsa.um.edu.mx/terapia-fisica/" target="_blank"
+                            rel="noopener">Abrir el sitio</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <hr class="rule">
+
+        <!-- ===== CERTIFICACIONES ===== -->
+        <section class="wrap band" id="certificaciones">
+            <h2 class="h-sec">Certificaciones</h2>
+            <p class="lede">En orden, como fueron pasando.</p>
+            <ol class="tl">
+                <li>
+                    <time datetime="2025-12-10">10 de diciembre de 2025</time>
+                    <h3>Iniciación al Desarrollo con IA</h3>
+                    <p>BIG School. Jornadas formativas de 6 horas, dirigidas por Brais Moure.</p>
+                </li>
+                <li>
+                    <time datetime="2026-01-21">21 de enero de 2026</time>
+                    <h3>Javascript Fundamentals</h3>
+                    <p>Coddy. Folio 66zkX7-javascript-Bi8cmJ.</p>
+                </li>
+                <li>
+                    <time datetime="2026-02-24">24 de febrero de 2026</time>
+                    <h3>Basics of Classes and Objects in Java</h3>
+                    <p>Coddy. Folio 66zkX7-UrgIfa.</p>
+                </li>
+            </ol>
+        </section>
+
+        <hr class="rule">
+
+        <!-- ===== STACK ===== -->
+        <section class="wrap band" id="stack">
+            <h2 class="h-sec">Stack</h2>
+            <div class="stack">
+                <div>
+                    <h3>Lenguajes</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Librerías y frameworks</h3>
+                    <ul>
+                        <li>Bootstrap</li>
+                        <li>jQuery</li>
+                        <li>DataTables</li>
+                        <li>Soft UI</li>
+                        <li>Pannellum.js</li>
+                        <li>Node.js</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Herramientas</h3>
+                    <ul>
+                        <li>Git y GitHub</li>
+                        <li>VS Code</li>
+                        <li>cPanel</li>
+                        <li>Apache</li>
+                        <li>FileZilla</li>
+                        <li>MySQL</li>
+                        <li>Linux</li>
+                        <li>GIMP</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr class="rule">
+
+        <!-- ===== CONTACTO ===== -->
+        <section class="wrap band" id="contacto">
+            <div class="contact">
+                <div>
+                    <h2 class="h-sec">Hablemos</h2>
+                    <p class="lede">
+                        Estoy abierto a prácticas, colaboraciones y proyectos freelance de
+                        frontend. Escríbeme por el canal que te quede más cómodo; el correo
+                        es el más rápido.
+                    </p>
+                </div>
+                <ul class="links">
+                    <li><a href="mailto:icorralharper@gmail.com">Correo<span>icorralharper@gmail.com</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/issac-emilio-corral-harper-0a5163385/" target="_blank"
+                            rel="noopener">LinkedIn<span>issac-emilio-corral-harper</span></a></li>
+                    <li><a href="https://github.com/icorral02" target="_blank"
+                            rel="noopener">GitHub<span>icorral02</span></a></li>
+                    <li><a href="https://www.instagram.com/issac_c.h/" target="_blank"
+                            rel="noopener">Instagram<span>@issac_c.h</span></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100051885106439" target="_blank"
+                            rel="noopener">Facebook<span>Issac Corral</span></a></li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="foot">
+        <div class="wrap foot-grid">
+            <a class="mark" href="#inicio">
+                <svg viewBox="0 0 48 48" role="img" aria-label="Logotipo IECH">
+                    <path d="M15 9 L6 24 L15 39" fill="none" stroke="#008F8F" stroke-width="2.4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M33 9 L42 24 L33 39" fill="none" stroke="#00478F" stroke-width="2.4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <text x="24" y="29" text-anchor="middle" font-family="Poppins,sans-serif" font-weight="700"
+                        font-size="12.5" fill="#FFFFFF">IECH</text>
+                </svg>
+                <span>Issac Emilio Corral Harper</span>
+            </a>
+            <small>
+                Montemorelos, Nuevo León, México<br>
+                Diseñado y programado por mí, con HTML, CSS, JavaScript y Bootstrap.<br>
+                &copy; <span id="year">2026</span> Issac Emilio Corral Harper. Todos los derechos reservados.
+            </small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Cierra el menú móvil al elegir una sección.
+        document.querySelectorAll('#menu .nav-link').forEach(function (link) {
+            link.addEventListener('click', function () {
+                var menu = document.getElementById('menu');
+                if (menu.classList.contains('show')) {
+                    bootstrap.Collapse.getOrCreateInstance(menu).hide();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
