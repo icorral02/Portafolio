@@ -12,8 +12,6 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Tres <link> separados a propósito: si una familia fallara, las otras dos siguen cargando.
-     Un solo request combinado devuelve 400 y se cae la tipografía completa. -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet" />
@@ -33,11 +31,12 @@
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />    
+    <!-- Un solo archivo CSS unificado -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <!-- ===== FONDO FIJO: patrón SVG vía CSS (background-image en .circuit) ===== -->
+    <!-- ===== FONDO FIJO ===== -->
     <div class="circuit" aria-hidden="true"></div>
     <div class="veil" aria-hidden="true"></div>
 
@@ -342,7 +341,10 @@
       <!-- ===== CERTIFICACIONES ===== -->
       <section class="wrap band" id="certificaciones">
         <h2 class="h-sec">Certificaciones</h2>
-        <p class="lede">En orden, como fueron pasando.</p>
+        <p class="lede">
+          En orden, como fueron pasando. Haz clic en un certificado para
+          ampliarlo.
+        </p>
         <ol class="tl">
           <li>
             <div class="tl-content">
@@ -427,6 +429,18 @@
       <!-- ===== STACK ===== -->
       <section class="wrap band" id="stack">
         <h2 class="h-sec">Stack</h2>
+
+        <!-- Buscador interactivo en tiempo real (jQuery) -->
+        <div class="stack-search-box mb-4">
+          <input
+            type="text"
+            id="stack-search"
+            class="form-control stack-input"
+            placeholder="🔍 Filtrar tecnologías (ej: JavaScript, Git, React)..."
+            aria-label="Filtrar tecnologías" />
+          <div id="stack-count" class="stack-count-info mt-2"></div>
+        </div>
+
         <div class="stack">
           <div>
             <h3>Lenguajes</h3>
@@ -626,9 +640,36 @@
       </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- ===== MODAL VISTA PREVIA CERTIFICADO (jQuery) ===== -->
+    <div id="cert-modal" class="cert-modal-backdrop" style="display: none">
+      <div class="cert-modal-box">
+        <button
+          type="button"
+          id="close-cert-modal"
+          class="cert-modal-close-btn"
+          aria-label="Cerrar modal">
+          &times;
+        </button>
+        <div id="cert-modal-body"></div>
+      </div>
+    </div>
+
+    <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+    <button
+      id="back-to-top"
+      class="btn-top"
+      title="Volver al inicio"
+      aria-label="Volver al inicio"
+      style="display: none">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script src="main.js"></script>
   </body>
 </html>
