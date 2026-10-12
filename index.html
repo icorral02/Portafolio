@@ -7,7 +7,9 @@
     <meta
       name="description"
       content="Portafolio de Issac Emilio Corral Harper. Estudiante de Ingeniería en Sistemas Computacionales y desarrollador web frontend en la Universidad de Montemorelos." />
-
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Tres <link> separados a propósito: si una familia fallara, las otras dos siguen cargando.
@@ -32,6 +34,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="animations.css" />
   </head>
 
   <body>
@@ -143,23 +146,24 @@
       <section class="wrap" aria-label="Datos rápidos">
         <div class="facts">
           <div class="fact">
-            <b>2</b><small>sitios institucionales publicados y en línea</small>
+            <b data-count-items=".proj">2</b
+            ><small>sitios institucionales publicados y en línea</small>
           </div>
           <div class="fact">
-            <b>2024</b
+            <b data-since="2024-07" data-suffix="+ años">2+ años</b
             ><small
               >trabajando en el Departamento de Comunicación
               Institucional</small
             >
           </div>
           <div class="fact">
-            <b>3</b
+            <b data-count-items=".tl li">4</b
             ><small
               >certificaciones completadas fuera del plan de estudios</small
             >
           </div>
           <div class="fact">
-            <b>3.º</b
+            <b data-count="3" data-suffix=".º">3.º</b
             ><small>semestre de Ingeniería en Sistemas Computacionales</small>
           </div>
         </div>
@@ -637,5 +641,6 @@
         });
       });
     </script>
+    <script src="animations.js"></script>
   </body>
 </html>
