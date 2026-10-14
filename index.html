@@ -33,6 +33,9 @@
       rel="stylesheet" />
     <!-- Un solo archivo CSS unificado -->
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/node_modules/lightbox2/src/css/lightbox.css" />
   </head>
 
   <body>
@@ -357,10 +360,12 @@
             </div>
             <a
               class="tl-cert"
-              href="assets/Certificacion-CursoIA.pdf"
+              href="assets/cert-curso-ia.jpg"
               target="_blank"
               rel="noopener"
-              aria-label="Ver certificado de Iniciación al Desarrollo con IA (PDF)">
+              aria-label="Ver certificado de Iniciación al Desarrollo con IA (PDF)"
+              data-lightbox="cert-curso-ia"
+              data-title="Curso de Desarrollo con IA | BIG School">
               <img
                 src="assets/cert-curso-ia.jpg"
                 alt="Certificado: Iniciación al Desarrollo con IA"
@@ -375,10 +380,10 @@
             </div>
             <a
               class="tl-cert"
-              href="assets/certificado_JavaScript.pdf"
-              target="_blank"
-              rel="noopener"
-              aria-label="Ver certificado de Javascript Fundamentals (PDF)">
+              href="assets/cert-javascript.jpg"
+              data-lightbox="cert-javascript"
+              data-title="Javascript Fundamentals | Coddy.Tech"
+              aria-label="Ampliar certificado de Javascript Fundamentals">
               <img
                 src="assets/cert-javascript.jpg"
                 alt="Certificado: Javascript Fundamentals"
@@ -393,10 +398,10 @@
             </div>
             <a
               class="tl-cert"
-              href="assets/certificado_JavaOO.pdf"
-              target="_blank"
-              rel="noopener"
-              aria-label="Ver certificado de Basics of Classes and Objects in Java (PDF)">
+              href="assets/cert-java-oo.jpg"
+              data-lightbox="cert-java-oo"
+              data-title="Basics of Classes and Objects in Java | Coddy.Tech"
+              aria-label="Ampliar certificado de Basics of Classes and Objects in Java">
               <img
                 src="assets/cert-java-oo.jpg"
                 alt="Certificado: Basics of Classes and Objects in Java"
@@ -411,10 +416,10 @@
             </div>
             <a
               class="tl-cert"
-              href="assets/certificado_Javascript(2).pdf"
-              target="_blank"
-              rel="noopener"
-              aria-label="Ver certificado de Logic & flow JavaScript (PDF)">
+              href="assets/certificadoJavaScript(2).png"
+              data-lightbox="certificadoJavaScript"
+              data-title="Logic & flow JavaScript | Coddy.Tech"
+              aria-label="Ampliar certificado de Logic & flow JavaScript">
               <img
                 src="assets/certificadoJavaScript(2).png"
                 alt="Certificado: Logic & flow JavaScript"
@@ -640,20 +645,6 @@
       </div>
     </footer>
 
-    <!-- ===== MODAL VISTA PREVIA CERTIFICADO (jQuery) ===== -->
-    <div id="cert-modal" class="cert-modal-backdrop" style="display: none">
-      <div class="cert-modal-box">
-        <button
-          type="button"
-          id="close-cert-modal"
-          class="cert-modal-close-btn"
-          aria-label="Cerrar modal">
-          &times;
-        </button>
-        <div id="cert-modal-body"></div>
-      </div>
-    </div>
-
     <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
     <button
       id="back-to-top"
@@ -671,5 +662,6 @@
       crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
+    <script src="./assets/node_modules/lightbox2/src/js/lightbox.js"></script>
   </body>
 </html>

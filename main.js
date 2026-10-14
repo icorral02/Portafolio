@@ -3,8 +3,8 @@
    ============================================================
    Mapeo de la Rúbrica:
    1. SELECTORES DIVERSOS USADOS (al menos 5 tipos):
-      - ID: $('#year'), $('#stack-search'), $('#cert-modal'), $('#back-to-top'), $('#menu')
-      - Clase: $('.hero-photo'), $('.tl-cert'), $('.nav-bar'), $('.stack li')
+      - ID: $('#year'), $('#stack-search'), $('#back-to-top'), $('#menu')
+      - Clase: $('.hero-photo'), $('.nav-bar'), ...
       - Elemento: $('header'), $('section'), $('b')
       - Atributo: $('a[target="_blank"]'), $('b[data-count-items]'), $('a[href^="#"]')
       - Pseudo-selector: $('.stack li:visible'), $('.links li:even'), $('.stack li:hidden')
@@ -16,17 +16,17 @@
 
    3. MÉTODOS JQUERY DISTINTOS (al menos 4):
       - .text(): Actualiza el año del footer, el contador del stack y los valores animados.
-      - .html(): Modifica el contenido dinámico del modal de certificados.
+      - .html(): Inyecta el contador de coincidencias en el buscador del Stack.
       - .val(): Lee el valor ingresado en el buscador en tiempo real.
-      - .attr(): Obtiene/asigna URLs y textos alt de las imágenes.
+      - .attr(): Asigna la dirección de animación (data-reveal) a cada elemento.
       - .append() / .remove(): Inserta/elimina la etiqueta flotante en la foto de perfil.
       - .hide() / .show(): Filtra tecnologías en la sección Stack.
-      - .fadeIn() / .fadeOut(): Animaciones suaves para el modal y el botón volver arriba.
+      - .fadeIn() / .fadeOut(): Animaciones suaves del botón volver arriba.
 
    4. EVENTOS VINCULADOS (al menos 3 distintos):
       - Evento 1: .hover() / .mouseenter() / .mouseleave() -> Efecto visual en foto de portada.
       - Evento 2: .keyup() -> Filtro de tecnologías en tiempo real en la sección Stack.
-      - Evento 3: .click() -> Modal/Lightbox interactivo al hacer clic en certificados.
+      - Evento 3: .click() -> Cierre del menú móvil y botón 'Volver arriba'.
       - Evento 4: .scroll() -> Cambio de estilo en la barra de navegación y botón 'Volver arriba'.
    ============================================================ */
 
@@ -112,47 +112,6 @@ $(function () {
     $("#stack-count").html(
       "Coincidencias encontradas: <strong>" + matches + "</strong>",
     );
-  });
-
-  /* ============================================================
-     4. EVENTO CLICK: MODAL/LIGHTBOX DE CERTIFICADOS
-     (Demuestra: $('.class'), .click(), .attr(), .html(), .fadeIn(), .fadeOut())
-     ============================================================ */
-  // Selector de Clase + Evento .click()
-  $(".tl-cert").on("click", function (e) {
-    e.preventDefault(); // Evita abrir el PDF directamente en una nueva pestaña
-
-    var pdfUrl = $(this).attr("href"); // .attr()
-    var $img = $(this).find("img");
-    var imgSrc = $img.attr("src"); // .attr()
-    var imgAlt = $img.attr("alt") || "Certificado";
-    var certTitle = $(this).closest("li").find("h3").text(); // .text()
-
-    // Generar el contenido HTML dinámico usando .html()
-    var modalContent =
-      '<h3 class="mb-3 text-teal" style="font-family: var(--f-head); font-size: 1.25rem;">' +
-      certTitle +
-      "</h3>" +
-      '<img src="' +
-      imgSrc +
-      '" alt="' +
-      imgAlt +
-      '" style="width: 100%; border-radius: 8px; margin-bottom: 1.2rem; border: 1px solid var(--hairline);">' +
-      '<div class="text-end">' +
-      '<a href="' +
-      pdfUrl +
-      '" target="_blank" rel="noopener" class="btn-solid" style="font-size: 0.88rem; padding: 0.5rem 1rem;">Abrir PDF oficial</a>' +
-      "</div>";
-
-    $("#cert-modal-body").html(modalContent); // .html()
-    $("#cert-modal").fadeIn(250); // .fadeIn()
-  });
-
-  // Evento para cerrar el modal
-  $("#close-cert-modal, #cert-modal").on("click", function (e) {
-    if (e.target === this || e.target.id === "close-cert-modal") {
-      $("#cert-modal").fadeOut(200); // .fadeOut()
-    }
   });
 
   /* ============================================================
